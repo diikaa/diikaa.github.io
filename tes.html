@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="stylemon.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a class="a-navbar">MONITORING TANAMAN HORTIKULTURA</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR END -->
+
+        <!-- CONTENT 1 -->
+        <div class="container-content">
+            <div id="container">
+                <h2>Login</h2>
+                <form action="login.php" method="post">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+                <div class="register-link">
+                    <p>Belum ada akun? <a href="#" id="register">Registrasi disini</a></p>
+                </div>
+            </div>
+
+            <div id="register-form" style="display:none;">
+                <div id="container">
+                    <h2>Register</h2>
+                    <form action="register.php" method="post">
+                        <div>
+                            <label for="reg-username">Username:</label>
+                            <input type="text" id="reg-username" name="reg-username" required>
+                        </div>
+                        <div>
+                            <label for="reg-password">Password:</label>
+                            <input type="password" id="reg-password" name="reg-password" required>
+                        </div>
+                        <div>
+                            <input type="submit" value="Register">
+                        </div>
+                    </form>
+                    <div class="register-link">
+                        <p>Sudah memiliki akun? <a href="#" id="login">Login disini</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("register").addEventListener("click", function(event){
+                    event.preventDefault();
+                    document.getElementById("container").style.display = "none";
+                    document.getElementById("register-form").style.display = "block";
+                });
+
+                document.getElementById("login").addEventListener("click", function(event){
+                    event.preventDefault();
+                    document.getElementById("register-form").style.display = "none";
+                    document.getElementById("container").style.display = "block";
+                });
+            </script>
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="container-footer">
+            <body>
+                <h1 class="h1-footer"><marquee>SELAMAT DATANG DI WEBSITE MONITORING HORTIKULTURA</marquee></h1>
+            </body>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+
+</body>
+</html>

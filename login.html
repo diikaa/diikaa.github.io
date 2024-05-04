@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="stylemon.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a class="a-navbar">MONITORING TANAMAN HORTIKULTURA</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR END -->
+
+        <!-- CONTENT 1 -->
+        <div class="container-content">
+            <div id="container">
+                <h2>Login</h2>
+                <form action="monitoring.html" method="post">
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Login">
+                </form>
+                <div class="register-link">
+                    <p>Belum ada akun? <a href="#" id="register">Registrasi disini</a></p>
+                </div>
+            </div>
+        
+            <div id="register-form" style="display:none;">
+                <div id="container">
+                    <h2>Register</h2>
+                    <form action="login.html" method="post">
+                        <input type="text" name="fullname" placeholder="Full Name" required><br>
+                        <input type="text" name="email" placeholder="Email" required><br>
+                        <input type="text" name="notelp" placeholder="No Telepon" required><br>
+                        <input type="text" name="username" placeholder="Username" required><br>
+                        <input type="password" name="password" placeholder="Password" required><br>
+                        <input type="submit" value="Register">
+                    </form>
+                    <div class="register-link">
+                        <p>Sudah memiliki akun? <a href="#" id="login">Login disini</a></p>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                document.getElementById("register").addEventListener("click", function(event){
+                    event.preventDefault();
+                    document.getElementById("container").style.display = "none";
+                    document.getElementById("register-form").style.display = "block";
+                });
+        
+                document.getElementById("login").addEventListener("click", function(event){
+                    event.preventDefault();
+                    document.getElementById("register-form").style.display = "none";
+                    document.getElementById("container").style.display = "block";
+                });
+            </script>
+        </div>
+        <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="container-footer">
+            <body>
+                <h1 class="h1-footer"><marquee>SELAMAT DATANG DI WEBSITE MONITORING HORTIKULTURA</h1></marquee>
+            </body>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+    
+</body>
+</html>
